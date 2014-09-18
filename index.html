@@ -1,1 +1,29 @@
-Hello World
+<html lang='en'>
+<!-- <![endif] -->
+<head>
+  <title>russell.fail</title>
+</head>
+<body>
+<h1 id="word">russell</h1>
+<script type="text/javascript">
+(function(document) {
+
+ var russell = {}, swapper, interval;
+
+ swapper = function (word, next) {
+   return function() {
+     document.getElementById("word").innerHTML = word;
+     setTimeout(russell[next], interval);
+   }
+ };
+
+ russell.russell  = swapper("russell", "fail");
+ russell.fail     = swapper("fail", "russell");
+ interval         = 1000;
+
+ setTimeout(russell.fail, interval);
+
+ })(document);
+</script>
+</body>
+</html>
