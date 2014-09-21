@@ -5,25 +5,51 @@
 </head>
 <body>
 <h1 id="word">russell</h1>
+<h1 id="days">1 days</h1>
+<h1>
 <script type="text/javascript">
 (function(document) {
 
- var russell = {}, swapper, interval;
+  var russell = {}
+  ,   h1      = document.getElementById("word")
+  ,   swapper
+  ,   interval
+  ;
 
- swapper = function (word, next) {
-   return function() {
-     document.getElementById("word").innerHTML = word;
-     setTimeout(russell[next], interval);
-   }
- };
+  swapper = function (word, next) {
+    return function() {
+      h1.innerHTML = word;
+      setTimeout(russell[next], interval);
+    }
+  };
 
- russell.russell  = swapper("russell", "fail");
- russell.fail     = swapper("fail", "russell");
- interval         = 1000;
+  russell.russell  = swapper("russell", "fail");
+  russell.fail     = swapper("fail", "russell");
+  interval         = 1000;
 
- setTimeout(russell.fail, interval);
+  setTimeout(russell.fail, interval);
 
- })(document);
+})(document);
+
+(function(document) {
+  var day      = 24*60*60*1000
+  ,   start    = new Date(2014, 8, 20)
+  ,   h1       = document.getElementById("days")
+  ,   interval
+  ;
+
+  interval = function () {
+    return Math.round(Math.abs((start.getTime() - new Date().getTime()) / day));
+  };
+
+  refresh = function () {
+    h1.innerHTML = interval() + " days";
+  };
+
+  refresh();
+  setInterval(refresh, 1000 * 60);
+
+})(document);
 </script>
 </body>
 </html>
