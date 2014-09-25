@@ -1,0 +1,50 @@
+*
+  padding: 0
+  margin: 0
+  font-family: Monaco
+  font-size: 20px
+
+body
+  background-color: #3f3f3f
+
+h1
+  margin: 40px 0
+  padding-left: 120px
+  color: #bddb9c
+
+.opening-tag, .closing-tag, .void-tag
+  color: #bddb9c
+.opening-tag:before, .void-tag:before, .doctype:before
+  content: "<"
+.closing-tag:before
+  content: "</"
+.opening-tag:after, .closing-tag:after, .doctype:after
+  content: ">"
+.void-tag:after
+  content: "/>"
+
+.doctype
+  color: #7f7f75
+
+.string
+  color: #aeaeae
+
+.text
+  color: #fdf6e4
+
+.buffer
+  padding-left: 45px
+
+#line-numbers
+  background-color: #565656
+  color: #aeaeae
+  width: 25px
+  height: 100%
+  position: absolute
+  left: 0
+  top: 0
+  padding: 0 10px
+
+.line-number
+  display: block
+  text-align: right
