@@ -4,7 +4,7 @@
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
-  :source-paths ["src" "dev"]
+  :source-paths ["src/cljs" "dev"]
 
   :dependencies [[org.clojure/clojure "1.6.0"]
                  [org.clojure/clojurescript "0.0-3058" :scope "provided"]
@@ -25,14 +25,15 @@
             [lein-figwheel "0.2.0-SNAPSHOT"]]
 
   :figwheel {:http-server-root "public"
+             :css-dirs ["resources/public/css"]
              :port 3449}
 
-  :cljsbuild {:builds {:app {:source-paths ["src" "dev"]
+  :cljsbuild {:builds {:app {:source-paths ["src/cljs" "dev"]
                              :compiler {:output-to "resources/public/js/app.js"
                                         :output-dir "resources/public/js/out"
                                         :source-map    "resources/public/js/out.js.map"
                                         :optimizations :none}}
-                       :prod {:source-paths ["src"]
+                       :prod {:source-paths ["src/cljs"]
                               :compiler {:output-to "resources/public/js/russellfail.min.js"
                                          :optimizations :advanced}}}}
   )

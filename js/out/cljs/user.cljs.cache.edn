@@ -1,2 +1,0 @@
-;; Analyzed by ClojureScript 0.0-3058
-{:cljs.analyzer/constants {:order [:websocket-url :jsload-callback], :seen #{:jsload-callback :websocket-url}}, :imports nil, :requires {figwheel figwheel.client, figwheel.client figwheel.client, russellfail.core russellfail.core, core russellfail.core}, :uses nil, :require-macros {figwheel.client figwheel.client, figwheel figwheel.client}, :use-macros nil, :excludes #{}, :doc nil, :name cljs.user}

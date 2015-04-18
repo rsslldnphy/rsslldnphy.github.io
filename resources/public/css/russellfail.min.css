@@ -1,0 +1,15 @@
+html, body, * {
+  margin: 0 !important;
+  padding: 0 !important; }
+
+html, body {
+  height: 100%; }
+
+#russellfail {
+  height: 100vh; }
+
+.block {
+  cursor: pointer;
+  margin: 0 !important;
+  padding: 0 !important;
+  float: left; }
