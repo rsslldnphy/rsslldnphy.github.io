@@ -1,0 +1,1 @@
+{"version":3,"file":"\/Users\/rsslldnphy\/Code\/russellfail\/resources\/public\/js\/out\/cljs\/user.js","sources":["user.cljs"],"lineCount":12,"mappings":";AACA;;;;AAIA,AAACA;AAED,2CAAA,uEAAA,kCAAA,pJAACC,gOAEkB;AAAA,AAAO,OAACC;;AAE3B,AAACA","names":["cljs.core\/enable-console-print!","figwheel.client\/watch-and-reload","russellfail.core\/main"]}
