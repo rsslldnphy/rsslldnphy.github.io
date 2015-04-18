@@ -44,7 +44,7 @@
   [timeout handler]
   (reset! timeout (js/setTimeout #(do (handler)
                                       (start-random-timer timeout handler))
-                                 (rand-int 10000))))
+                                 (rand-int 50000))))
 
 (defn div
   []
