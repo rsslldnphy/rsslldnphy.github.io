@@ -14,7 +14,9 @@
                  [figwheel "0.2.5"]
                  [environ "1.0.0"]
                  [leiningen "2.5.0"]
-                 [reagent "0.5.0"]]
+                 [re-frame "0.2.0"]
+                 [secretary "1.2.1"]
+                 [reagent "0.5.0-alpha3"]]
 
   :min-lein-version "2.5.0"
 
@@ -29,5 +31,8 @@
                              :compiler {:output-to "resources/public/js/app.js"
                                         :output-dir "resources/public/js/out"
                                         :source-map    "resources/public/js/out.js.map"
-                                        :optimizations :none}}}}
+                                        :optimizations :none}}
+                       :prod {:source-paths ["src"]
+                              :compiler {:output-to "resources/public/js/russellfail.min.js"
+                                         :optimizations :advanced}}}}
   )
