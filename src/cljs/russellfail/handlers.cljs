@@ -1,9 +1,9 @@
 (ns russellfail.handlers
   (:require
-    [russellfail.hex :as hex]
-    [re-frame.core   :refer [dispatch dispatch-sync register-handler trim-v]]
-    [reagent.ratom   :refer [IReactiveAtom]])
-  (:import ))
+    [russellfail.hex    :as hex]
+    [russellfail.splash :as splash]
+    [re-frame.core      :refer [dispatch dispatch-sync register-handler trim-v]]
+    [reagent.ratom      :refer [IReactiveAtom]]))
 
 (defn bang!
   "Middleware that allows you to do side-effecty things,
@@ -42,5 +42,10 @@
 (register-handler
   ::splash
   [trim-v bang!]
-  (fn [db [x y]]
-    (dispatch [::update-block-color x y "transparent"])))
+  (fn [db [x y & [n]]]
+    (println (splash/ripple x y (or n 0)))
+    (when (not-empty
+            (doall (for [[x y] (splash/ripple x y (or n 0))
+                         :when (get-in db [:blocks y x])]
+                     (do (dispatch [::update-block-color x y "transparent"]) [x y]))))
+      (js/setTimeout #(dispatch [::splash x y (inc (or n 0))]) 200))))
