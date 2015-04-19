@@ -39,13 +39,32 @@
   (fn [db [x y color]]
     (assoc-in db [:blocks y x :color] (or color (hex/rand-hex)))))
 
+
 (register-handler
   ::splash
   [trim-v bang!]
-  (fn [db [x y & [n]]]
-    (println (splash/ripple x y (or n 0)))
+  (fn [db [x y n ripples]]
+    (let [n       (or n 0)
+          ripples (or ripples 1)]
+      (when (not-empty
+              (doall (for [[x y] (splash/ripple x y n)
+                           :when (get-in db [:blocks y x])]
+                       (do (dispatch [::update-block-color x y "transparent"]) [x y]))))
+        (js/setTimeout #(dispatch [::splash x y (inc n) ripples]) 200))
+      (when (and (= n 2)
+                 (pos? ripples))
+        (dispatch [::ripple x y 0 ripples])))))
+
+(register-handler
+  ::ripple
+  [trim-v bang!]
+  (fn [db [x y n ripples]]
     (when (not-empty
-            (doall (for [[x y] (splash/ripple x y (or n 0))
+            (doall (for [[x y] (splash/ripple x y n)
                          :when (get-in db [:blocks y x])]
-                     (do (dispatch [::update-block-color x y "transparent"]) [x y]))))
-      (js/setTimeout #(dispatch [::splash x y (inc (or n 0))]) 200))))
+                     (do (dispatch [::update-block-color x y]) [x y]))))
+      (js/setTimeout #(dispatch [::ripple x y (inc n) ripples]) 200))
+    (when (and (= n 2)
+               (pos? ripples))
+      (dispatch [::splash x y 0 (dec ripples)]))))
+

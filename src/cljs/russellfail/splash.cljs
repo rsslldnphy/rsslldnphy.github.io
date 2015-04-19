@@ -2,7 +2,6 @@
 
 (defn ripple
   [x y n]
-  (println "x:" x "y:" y "n:" n)
   (into #{} (let [min-x (- x n)
                   min-y (- y n)
                   max-x (+ x n)
