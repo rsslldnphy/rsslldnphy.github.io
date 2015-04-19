@@ -16,25 +16,25 @@
 (register-sub
   ::columns
   (fn [db _]
-    (let [width      (reaction @(subscribe [::width]))
-          block-size (reaction @(subscribe [::block-size]))]
+    (let [width      (subscribe [::width])
+          block-size (subscribe [::block-size])]
       (reaction (/ @width @block-size)))))
 
 (register-sub
   ::rows
   (fn [db _]
-    (let [height     (reaction @(subscribe [::height]))
-          block-size (reaction @(subscribe [::block-size]))]
+    (let [height     (subscribe [::height])
+          block-size (subscribe [::block-size])]
       (reaction (/ @height @block-size)))))
 
 (register-sub
   ::block-size
   (fn [db _]
-    (let [width (reaction @(subscribe [::width]))]
+    (let [width (subscribe [::width])]
       (reaction (/ @width
                    (Math/ceil (/ @width 100)))))))
 
 (register-sub
   ::block-color
   (fn [db [_ x y]]
-    (reaction (get-in @db [:blocks y x :color] "#fff"))))
+    (reaction (get-in @db [:blocks y x :color] "trasparent"))))

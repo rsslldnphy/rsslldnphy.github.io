@@ -36,5 +36,11 @@
 (register-handler
   ::update-block-color
   [trim-v]
-  (fn [db [x y & [color]]]
+  (fn [db [x y color]]
     (assoc-in db [:blocks y x :color] (or color (hex/rand-hex)))))
+
+(register-handler
+  ::splash
+  [trim-v bang!]
+  (fn [db [x y]]
+    (dispatch [::update-block-color x y "transparent"])))

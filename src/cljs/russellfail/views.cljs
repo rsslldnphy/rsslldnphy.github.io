@@ -14,17 +14,19 @@
               color [:russellfail.subs/block-color x y]]
     [:div.block {:style {:width (str size "px")
                          :height (str size "px")
-                         :background-color (str "#" color)}
+                         :background-color color}
                  :on-mouse-leave
                  #(dispatch [:russellfail.handlers/update-block-color x y])
                  :on-click
-                 #(dispatch [:russellfail.handlers/update-block-color x y])}]))
+                 #(dispatch [:russellfail.handlers/splash x y])}]))
 
 (defn page
   []
   (with-subs [columns [:russellfail.subs/columns]
               rows    [:russellfail.subs/rows]]
-    (into [:div#russellfail]
-          (for [y (range rows)
-                x (range columns)]
-            [block x y]))))
+    [:div.overlays-container
+     (into [:div.blocks-overlay]
+           (for [y (range rows)
+                 x (range columns)]
+             [block x y]))
+     [:div.heading-overlay [:h1 "rsslldnphy.com"]]]))

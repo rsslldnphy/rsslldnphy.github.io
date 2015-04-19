@@ -8,6 +8,6 @@
 
 (defn rand-hex
   []
-  (apply str
+  (apply str "#"
          (for [_ (range 6)] (rand-nth hex-digits))))
 
