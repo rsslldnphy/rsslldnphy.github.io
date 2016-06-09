@@ -26,5 +26,6 @@ facebook_username: russell.dunphy
 
 # Build settings
 markdown: kramdown
+highlighter: rouge
 gems:
   - jemoji
