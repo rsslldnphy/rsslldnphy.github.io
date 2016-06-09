@@ -27,13 +27,35 @@
     .left-column {
       text-align: right;
       border-right: 1px solid #eb6864;
-      min-height: 80vh;
     }
+
+    .left-column, .right-column {
+      height: calc(100vh - 130px);
+      overflow: hidden;
+    }
+
+    .column-scroll {
+      height: calc(100vh - 170px);
+      overflow: auto;
+      padding-right: 15px;
+    }
+
     .left-column h1, .right-column h1 {
       font-family: 'Quicksand';
       color: #666;
       font-size: 1.5em;
       margin-top: 0;
+    }
+    .thumbnail {
+      border: 0;
+      width: 100%;
+      padding: 0;
+    }
+
+    h2 {
+      font-size: 1.25em;
+      margin: 0;
+      color: #666;
     }
     </style>
   </head>
@@ -48,27 +70,60 @@
     <div id="main-content" class"container-fluid">
       <div class="left-column col-md-3">
         <h1>code</h1>
-        <p>lorem ipsum aeohuau aoeushaoe sa soeuhaoeu saoeuh saoesu a oseuaeohs aueoshaeuo</p>
-        <p>lorem ipsum aeohuau aoeushaoe sa soeuhaoeu saoeuh saoesu a oseuaeohs aueoshaeuo</p>
-        <p>lorem ipsum aeohuau aoeushaoe sa soeuhaoeu saoeuh saoesu a oseuaeohs aueoshaeuo</p>
+        <div class="column-scroll">
+        <div class="column-inner">
+          <div>
+            <h2>id</h2>
+            <span class="label label-info">ruby</span>
+            <p>immutable models based on hashes</p>
+          </div>
+          <div>
+            <h2>optional</h2>
+            <span class="label label-info">ruby</span>
+            <p>optional values with pattern matching</p>
+          </div>
+      </div>
+      </div>
       </div>
       <div class="right-column col-md-3">
         <h1>paint</h1>
-        <p>lorem ipsum aeohuau aoeushaoe sa soeuhaoeu saoeuh saoesu a oseuaeohs aueoshaeuo</p>
-        <p>lorem ipsum aeohuau aoeushaoe sa soeuhaoeu saoeuh saoesu a oseuaeohs aueoshaeuo</p>
-        <p>lorem ipsum aeohuau aoeushaoe sa soeuhaoeu saoeuh saoesu a oseuaeohs aueoshaeuo</p>
+        <div class="column-scroll">
+        <div class="column-inner">
+        <div>
+          <p>cat (squished)</p>
+          <img class="thumbnail" src="/img/cat-squished.jpg" />
+        </div>
+        <div>
+          <p>molly 3 (with mum's legs)</p>
+          <img class="thumbnail" src="/img/molly-3.jpg" />
+        </div>
+        <hr>
+        <div>
+          <p>molly</p>
+          <img class="thumbnail" src="/img/molly-1.jpg" />
+        </div>
+      </div>
+      </div>
       </div>
       <div class="left-column col-md-3">
         <h1>words</h1>
+        <div class="column-scroll">
+        <div class="column-inner">
         <p>lorem ipsum aeohuau aoeushaoe sa soeuhaoeu saoeuh saoesu a oseuaeohs aueoshaeuo</p>
         <p>lorem ipsum aeohuau aoeushaoe sa soeuhaoeu saoeuh saoesu a oseuaeohs aueoshaeuo</p>
         <p>lorem ipsum aeohuau aoeushaoe sa soeuhaoeu saoeuh saoesu a oseuaeohs aueoshaeuo</p>
       </div>
+      </div>
+      </div>
       <div class="right-column col-md-3">
         <h1>rope</h1>
+        <div class="column-scroll">
+        <div class="column-inner">
         <p>lorem ipsum aeohuau aoeushaoe sa soeuhaoeu saoeuh saoesu a oseuaeohs aueoshaeuo</p>
         <p>lorem ipsum aeohuau aoeushaoe sa soeuhaoeu saoeuh saoesu a oseuaeohs aueoshaeuo</p>
         <p>lorem ipsum aeohuau aoeushaoe sa soeuhaoeu saoeuh saoesu a oseuaeohs aueoshaeuo</p>
+      </div>
+      </div>
       </div>
     </div>
   </body>
