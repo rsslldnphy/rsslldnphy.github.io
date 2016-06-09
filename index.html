@@ -5,64 +5,68 @@ layout: default
 <div id="main-content" class"container-fluid">
   <div class="left-column col-md-3">
     <h1>code</h1>
-    <div class="column-scroll">
-      <div class="column-inner">
-        {% for post in site.categories.code %}
-        <div class="code-summary">
-          <h2>{{ post.title }}</h2>
-          <p>
-          <a class="code-summary-repo-link" target="_blank" href="{{ post.repo_url }}">{{ post.repo_url }}</a>
-          {{ post.description }}
-          <br>
-          {% for tech in post.tech %}
-          <span class="label label-info">{{ tech }}</span>
+    <div class="row">
+      <div class="column-scroll col-md-12">
+        <div class="column-inner">
+          {% for post in site.categories.code %}
+          <div class="code-summary">
+            <h2>{{ post.title }}</h2>
+            <p>
+            <a class="code-summary-repo-link" target="_blank" href="{{ post.repo_url }}">{{ post.repo_url }}</a>
+            {{ post.description }}<br>
+            {% for tech in post.tech %}
+            <span class="label label-info">{{ tech }}</span>
+            {% endfor %}
+            </p>
+          </div>
           {% endfor %}
-          </p>
         </div>
-        {% endfor %}
       </div>
     </div>
   </div>
   <div class="right-column col-md-3">
     <h1>paint</h1>
-    <div class="column-scroll">
-      <div class="column-inner">
-        <div>
-          <p>cat (squished)</p>
-          <img class="thumbnail" src="/img/cat-squished.jpg" />
-        </div>
-        <div>
-          <p>molly 3 (with mum's legs)</p>
-          <img class="thumbnail" src="/img/molly-3.jpg" />
-        </div>
-        <hr>
-        <div>
-          <p>molly</p>
-          <img class="thumbnail" src="/img/molly-1.jpg" />
+    <div class="row">
+      <div class="column-scroll col-md-12">
+        <div class="column-inner">
+          <div>
+            <h2>cat (squished)</h2>
+            <img class="thumbnail" src="/img/cat-squished.jpg" />
+          </div>
+          <div>
+            <h2>molly 3 (with mum's legs)</h2>
+            <img class="thumbnail" src="/img/molly-3.jpg" />
+          </div>
+          <div>
+            <h2>molly</h2>
+            <img class="thumbnail" src="/img/molly-1.jpg" />
+          </div>
         </div>
       </div>
     </div>
   </div>
   <div class="left-column col-md-3">
-  <h1>words</h1>
-  <div class="column-scroll">
-    <div class="column-inner">
-      <p>lorem ipsum aeohuau aoeushaoe sa soeuhaoeu saoeuh saoesu a oseuaeohs aueoshaeuo</p>
-      <p>lorem ipsum aeohuau aoeushaoe sa soeuhaoeu saoeuh saoesu a oseuaeohs aueoshaeuo</p>
-      <p>lorem ipsum aeohuau aoeushaoe sa soeuhaoeu saoeuh saoesu a oseuaeohs aueoshaeuo</p>
+    <h1>words</h1>
+    <div class="row">
+      <div class="column-scroll col-md-12">
+        <div class="column-inner">
+          <p>lorem ipsum aeohuau aoeushaoe sa soeuhaoeu saoeuh saoesu a oseuaeohs aueoshaeuo</p>
+          <p>lorem ipsum aeohuau aoeushaoe sa soeuhaoeu saoeuh saoesu a oseuaeohs aueoshaeuo</p>
+          <p>lorem ipsum aeohuau aoeushaoe sa soeuhaoeu saoeuh saoesu a oseuaeohs aueoshaeuo</p>
+        </div>
+      </div>
     </div>
   </div>
-  </div>
-</div>
-</div>
-<div class="right-column col-md-3">
-  <h1>words</h1>
-  <div class="column-scroll">
-    <div class="column-inner">
-      <p>lorem ipsum aeohuau aoeushaoe sa soeuhaoeu saoeuh saoesu a oseuaeohs aueoshaeuo</p>
-      <p>lorem ipsum aeohuau aoeushaoe sa soeuhaoeu saoeuh saoesu a oseuaeohs aueoshaeuo</p>
-      <p>lorem ipsum aeohuau aoeushaoe sa soeuhaoeu saoeuh saoesu a oseuaeohs aueoshaeuo</p>
+  <div class="right-column col-md-3">
+    <h1>words</h1>
+    <div class="row">
+      <div class="column-scroll col-md-12">
+        <div class="column-inner">
+          <p>lorem ipsum aeohuau aoeushaoe sa soeuhaoeu saoeuh saoesu a oseuaeohs aueoshaeuo</p>
+          <p>lorem ipsum aeohuau aoeushaoe sa soeuhaoeu saoeuh saoesu a oseuaeohs aueoshaeuo</p>
+          <p>lorem ipsum aeohuau aoeushaoe sa soeuhaoeu saoeuh saoesu a oseuaeohs aueoshaeuo</p>
+        </div>
+      </div>
     </div>
   </div>
-</div>
 </div>
