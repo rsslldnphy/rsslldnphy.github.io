@@ -2,6 +2,14 @@
 layout: default
 ---
 
+<div class="container-fluid">
+  <div class="col-md-6">
+    <h1>Paint</h1>
+  </div>
+  <div class="col-md-6">
+    <h1>Code</h1>
+  </div>
+</div>
 <div class="home">
 
   <h1 class="page-heading">Posts</h1>
@@ -18,6 +26,6 @@ layout: default
     {% endfor %}
   </ul>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+  <a href="{{ "/feed.xml" | prepend: site.baseurl }}"><i class="fa fa-rss"></i></a>
 
 </div>
