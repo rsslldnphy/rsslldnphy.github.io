@@ -1,3 +1,18 @@
 <footer>
   &copy; Russell Dunphy 2016 | <a target="_blank" href="//rsslldnphy.com/squares-colours">squares+colours</a> | <a target="_blank" href="//rsslldnphy.com/cv.html">cv</a>
 </footer>
+
+<script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+$(function (){
+  $('.section-tab-title a').on('click', function(e){
+    $('.section-tab-title').removeClass('active');
+    $('.tab-body').hide();
+    $(e.target).closest('.section-tab-title').addClass('active');
+    var url = e.target.href;
+    var hash = url.substring(url.indexOf("#"));
+    $(hash).fadeIn();
+  });
+});
+</script>
