@@ -4,13 +4,17 @@
 .right-column
   border-left: 1px solid #eb6864
 
-.left-column, .right-column
-  height: calc(100vh - 180px)
-  overflow: hidden
 
-.column-scroll
-  height: calc(100vh - 230px)
-  overflow: auto
+@media (min-width: 992px)
+  .left-column, .right-column
+    height: calc(100vh - 180px)
+    overflow: hidden
+  .column-scroll
+    height: calc(100vh - 230px)
+    overflow: auto
+  .column-inner
+    overflow: hidden
+
 
 .left-column h1, .right-column h1
   font-family: 'Quicksand'
@@ -24,9 +28,6 @@
   margin: 0
   margin-bottom: 10px
   color: #666
-
-.column-inner
-  overflow: hidden
 
 .code-summary-repo-link
   word-wrap: break-word
