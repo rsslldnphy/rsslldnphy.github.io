@@ -9,7 +9,8 @@ layout: default
       <div class="column-inner">
         {% for post in site.categories.code %}
         <div class="post-summary">
-          <h2><a class="post-link" href="{{ post.url }}">{{ post.title }}</h2>
+          <!-- <h2><a class="post-link" href="{{ post.url }}">{{ post.title }}</a></h2> -->
+          <h2>{{ post.title }}</h2>
           <p>
           <a class="code-summary-repo-link" target="_blank" href="{{ post.repo_url }}">{{ post.repo_url }}</a>
           {{ post.description }}
@@ -32,7 +33,7 @@ layout: default
       <div class="column-inner">
         {% for post in site.categories.paint %}
         <div class="post-summary">
-          <h2><a class="post-link" href="{{ post.url }}">{{ post.title }}</h2>
+          <h2><a class="post-link" href="{{ post.url }}">{{ post.title }}</a></h2>
           <img class="thumbnail" src="{{ post.thumbnail_url }}" />
         </div>
         {% endfor %}
