@@ -12,6 +12,7 @@ $(function (){
     $(e.target).closest('.section-tab-title').addClass('active');
     var url = e.target.href;
     var hash = url.substring(url.indexOf("#"));
+    $('html,body').scrollTop(0);
     $(hash).removeClass("hidden-sm hidden-xs");
     e.preventDefault();
   });
