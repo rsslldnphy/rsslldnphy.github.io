@@ -1,8 +1,16 @@
 ---
-layout: post
+layout: poem
 title:  "red carpet, late arrival"
 date:   2016-06-08 20:12:48 +0100
 categories: poem
+permalink: poems/red-carpet-late-arrival
+tags:
+ - poem
+ - cut-up
+summary: >
+  she wondered then, one thick calf complete<br>
+  if worrying affected her performance...
+
 ---
 
 she wondered then, one thick calf complete  

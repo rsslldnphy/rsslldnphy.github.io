@@ -1,8 +1,14 @@
 ---
-layout: post
+layout: poem
 title:  "if my cat had wings"
 date:   2016-06-08 20:12:48 +0100
 categories: poem
+permalink: poems/if-my-cat-had-wings
+tags:
+ - poem
+summary: >
+  If my cat had wings, and  
+  paws that could open door handles ...
 ---
 
 If my cat had wings, and  

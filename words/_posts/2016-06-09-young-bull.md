@@ -1,8 +1,16 @@
 ---
-layout: post
+layout: poem
 title:  "young bull"
 date:   2016-06-08 20:12:48 +0100
 categories: poem
+permalink: poems/young-bull
+tags:
+ - poem
+ - cut-up
+summary: >
+  Fat grown-ups who can't ride, sit<br>
+  beneath a statue of a small boy who smelt of mist...
+
 ---
 
 Fat grown-ups who can't ride, sit  
