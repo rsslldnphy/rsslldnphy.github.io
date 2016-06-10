@@ -8,11 +8,11 @@
 $(function (){
   $('.section-tab-title a').on('click', function(e){
     $('.section-tab-title').removeClass('active');
-    $('.tab-body').hide();
+    $('.tab-body').removeClass("hidden-sm hidden-xs").addClass("hidden-sm hidden-xs");
     $(e.target).closest('.section-tab-title').addClass('active');
     var url = e.target.href;
     var hash = url.substring(url.indexOf("#"));
-    $(hash).fadeIn();
+    $(hash).removeClass("hidden-sm hidden-xs");
   });
   $('.section-tab-title a:first').click();
 });
