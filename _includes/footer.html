@@ -13,6 +13,7 @@ $(function (){
     var url = e.target.href;
     var hash = url.substring(url.indexOf("#"));
     $(hash).removeClass("hidden-sm hidden-xs");
+    e.preventDefault();
   });
   $('.section-tab-title a:first').click();
 });
