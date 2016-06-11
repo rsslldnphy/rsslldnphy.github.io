@@ -28,3 +28,4 @@ markdown: kramdown
 highlighter: rouge
 gems:
   - jemoji
+  - jekyll-sitemap
