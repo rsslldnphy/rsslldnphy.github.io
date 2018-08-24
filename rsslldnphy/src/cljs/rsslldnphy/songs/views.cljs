@@ -40,7 +40,7 @@
       "this isn't some kind of metaphor"
       [:br]
       "goddamn, this is real"]]]
-   [:div.col-md-6 {:style {:background "white" :border-right "1px solid #dadada"}}
+   [:div.col-md-6 {:style {:background "white" :border-right "1px solid #dadada" :padding-bottom "25px"}}
     (into [:div.row]
           (for [id song-ids]
             [:div.col-md-12 [song id]]))]])
