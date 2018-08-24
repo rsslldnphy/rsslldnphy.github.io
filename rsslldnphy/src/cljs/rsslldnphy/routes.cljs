@@ -15,8 +15,8 @@
   (defroute "/pictures" []
     (re-frame/dispatch [:set-current-page :pictures]))
 
-  (defroute "/writing" []
-    (re-frame/dispatch [:set-current-page :writing]))
+  (defroute "/words" []
+    (re-frame/dispatch [:set-current-page :words]))
 
   (defroute "/cv" []
     (re-frame/dispatch [:set-current-page :cv]))
