@@ -9,14 +9,14 @@
   (defroute "/" []
     (re-frame/dispatch [:set-current-page :home]))
 
-  (defroute "/music" []
-    (re-frame/dispatch [:set-current-page :music]))
+  (defroute "/songs" []
+    (re-frame/dispatch [:set-current-page :songs]))
 
   (defroute "/pictures" []
     (re-frame/dispatch [:set-current-page :pictures]))
 
-  (defroute "/stories" []
-    (re-frame/dispatch [:set-current-page :stories]))
+  (defroute "/writing" []
+    (re-frame/dispatch [:set-current-page :writing]))
 
   (defroute "/cv" []
     (re-frame/dispatch [:set-current-page :cv]))

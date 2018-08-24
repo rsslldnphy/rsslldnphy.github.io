@@ -5,29 +5,9 @@
     [rsslldnphy.colors :as c]
     [rsslldnphy.subs :as subs]))
 
-(defn fizzle
-  [{:keys [opacity polarity]}]
-  (let [opacity (polarity opacity (/ (rand) 5))]
-    (cond (< opacity 0)
-          {:opacity 0 :polarity +}
-          (> opacity 1)
-          {:opacity 1 :polarity -}
-          :else
-          {:opacity opacity :polarity polarity})))
-
-(defn letter
-  [letter]
-  (let [state (reagent/atom {:opacity 1 :polarity -})]
-    (fn [letter]
-      (js/setTimeout #(swap! state fizzle) (+ 50 (rand-int 400)))
-      [:span {:style {:opacity (:opacity @state)
-                      :display "inline-block"
-                      :vertical-align "top"
-                      :margin-top (if (> (rand) 0.995) "-30px" "0px")}} letter])))
-
 (defn song
   [id]
-  [:iframe {:style {:border "none" :margin "15px 0"}
+  [:iframe {:style {:background "#f0f0f0" :border-radius "5px" :border "none" :margin-bottom "15px"}
             :width "100%"
             :height "120"
             :scrolling "no"
@@ -35,24 +15,13 @@
             :allow "autoplay"
             :src (str "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/" id "&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true")}])
 
-#_(defn main-panel []
-  [:div.container-fluid
-   #_[:div.col-md-12 {:style {:text-align "center"
-                  :font-size "2em"}}
-    (into [:h1 {:style {:margin-top "10vh"
-                        :color c/red
-                        :font-family "Quicksand, sans-serif"
-                        :font-size "3em"
-                        :margin-bottom "30px"}}]
-          (for [c "RSSLLDNPHY.COM"] [letter c]))]])
-
-(defn music
+(defn songs
   []
   [:div
    [:div.col-md-12 {:style {:pointer-events "none"}}
     [:div {:style {:padding-right "200px" :pointer-events "none"}}
      [:p
-      "pretty much all of the songs i make these days are about dogs in some form or other."
+      "pretty much all of the songs i make these days are about dogs in some form or other"
       [:br]
       "why? well, to paraphrase shellac: because they were dogs"
       [:br]
@@ -65,7 +34,7 @@
       "this isn't some kind of metaphor"
       [:br]
       "goddamn, this is real"]]]
-   [:div.col-md-6
+   [:div.col-md-6 {:style {:background "white" :border-right "1px solid #dadada"}}
     (into [:div.row]
           (for [id [291809263 292869289 346960292 348591853 390497697 415634163 487243335]]
             [:div.col-md-12 [song id]]))]])
@@ -92,8 +61,70 @@
      [:br]
      "it's mostly about dogs"
      [:br]
-     "i hope it brings you some joy"
-     ]]])
+     "i hope it brings you some joy"]]])
+
+(def images
+  [
+   "fred.jpg"
+   "withnail-bites.jpg"
+   "toffle.jpg"
+   "molly-garden.jpg"
+   "molly-perspective.jpg"
+   "two-cats.jpg"
+   "richard-and-withnail.jpg"
+   "me-and-gran.jpg"
+   "me-and-mum.jpg"
+   "medog.jpg"
+   "molly.jpg"
+   "kingsley.jpg"
+   "laughing-molly-lines.jpg"
+   "dovile.jpg"
+   "laughing-molly.jpg"
+   "gaivile.jpg"
+   "kira.jpg"
+   "hypnocat.jpg"
+   "kitten-whiskers.jpg"
+   "lolipomeranian.jpg"
+   "me-and-shithead.jpg"
+   "me-ill-lines.jpg"
+   "mulder.jpg"
+   "me-ill.jpg"
+   "bang.jpg"
+   "mixologist-1.jpg"
+   "mixologist-2.jpg"
+   "sam.jpg"
+   "sun-cat.jpg"
+   "binx-dishwasher.jpg"
+   "first-painting.jpg"
+   ])
+
+(defn pictures
+  []
+  [:div
+  [:div.col-md-12 {:style {:pointer-events "none"}}
+   [:div {:style {:padding-right "200px" :pointer-events "none"}}
+    [:p
+     "i have aphantasia, which means i have no visual imagination"
+     [:br]
+     "so pretty much all my pictures are copies of photographs"
+     [:br]
+     [:br]
+     "they're also mostly dogs"
+     [:br]
+     "plus the occassional cat or selfie with someone i care about"
+     [:br]
+     [:br]
+     "they're kind of a mess but i kind of like that"
+     [:br]
+     "i've never been very good at colouring inside the lines"]]]
+  [:div.col-md-6 {:style {:background "white" :border-right "1px solid #dadada"}}
+   [:div.row
+    (into [:div.col-md-6]
+          (for [f (take-nth 2 images)]
+            [:img {:style {:width "100%" :margin-bottom "15px"} :src (str "/img/thumbnails/" f)}]))
+    (into [:div.col-md-6]
+          (for [f (take-nth 2 (drop 1 images))]
+            [:img {:style {:width "100%" :margin-bottom "15px"} :src (str "/img/thumbnails/" f)}]))]]])
 
 (defn main-panel []
   []
@@ -102,5 +133,6 @@
       [:div {:style {:margin-top "15px" :font-family "Quicksand, sans-serif"}}
        (case @current-page
          :home [home]
-         :music [music]
+         :songs [songs]
+         :pictures [pictures]
          [:div])])))
