@@ -10,7 +10,8 @@
     (re-frame/dispatch [:set-current-page :home]))
 
   (defroute "/:page" [page]
-    (re-frame/dispatch [:set-current-page (keyword page)]))
+    (re-frame/dispatch-sync [:set-current-page (keyword page)])
+    (set! (.-scrollTop js/window) 0))
 
   (accountant/configure-navigation! {:nav-handler secretary/dispatch!
                                      :path-exists? secretary/locate-route}))
