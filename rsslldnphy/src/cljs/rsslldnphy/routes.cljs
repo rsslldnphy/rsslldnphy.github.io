@@ -9,16 +9,16 @@
   (defroute "/" []
     (re-frame/dispatch [:set-current-page :home]))
 
-  (defroute "/songs" []
+  (defroute "/songs/" []
     (re-frame/dispatch [:set-current-page :songs]))
 
-  (defroute "/pictures" []
+  (defroute "/pictures?" []
     (re-frame/dispatch [:set-current-page :pictures]))
 
-  (defroute "/words" []
+  (defroute "/words?" []
     (re-frame/dispatch [:set-current-page :words]))
 
-  (defroute "/cv" []
+  (defroute "/cv?" []
     (re-frame/dispatch [:set-current-page :cv]))
 
   (accountant/configure-navigation! {:nav-handler secretary/dispatch!
