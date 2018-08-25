@@ -15,8 +15,9 @@
     (fn []
       [:div {:style {:margin-top "15px" :font-family "Quicksand, sans-serif"}}
        (when-not (= :home @current-page)
-         [:div.col-md-12 {:style {:pointer-events "none"}}
+         [:div.col-md-12 {:style {:pointer-events "none" :overflow "hidden"}}
           [:strong (name @current-page)]
+          [:br]
           [:br]])
        (case @current-page
          :home     [home/home]
