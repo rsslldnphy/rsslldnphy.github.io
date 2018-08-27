@@ -26,6 +26,11 @@
       "wouldn't bother reading it if i were you"]]]
    [:div.col-md-6 {:style {:background "white" :border-right "1px solid #dadada"}}
     [story
+     "Hello"
+     "hello-224ef700db6f"
+     "https://cdn-images-1.medium.com/max/1600/1*CgCvxk-IN6o2THis0YjcDw.jpeg"
+     "Hello, Gerry,” I said, spotting the magpie in the empty basketball court as I walked down the street..."]
+    [story
      "Meat Cute"
      "meat-cute-b0263c1996eb"
      "https://cdn-images-1.medium.com/max/1600/1*2_kq_SAD8ZeaZKcVdb0kaw.jpeg"
@@ -53,11 +58,22 @@
      "https://cdn-images-1.medium.com/max/1600/0*tlFsQ9sJ2LjnzdPQ"
      "Fat grown-ups who can’t ride, sit" [:br] "beneath a statue of a small boy who smelt of mist..."]
     [story
+     "Kissing Lessons"
+     "kissing-lessons-5409fe28ae14"
+     "https://cdn-images-1.medium.com/max/1600/1*obw2p8OniuPrDqAmmk02Eg.jpeg"
+     "kissing lessons, spinning together" [:br] "a hot tub of blue stuff against brown clouds..."]
+    [story
      "Thinks"
      "thinks-b4a7d9811b56"
      "https://cdn-images-1.medium.com/max/1600/0*ZvYvlRyikc4hTO9H"
      "Beyond fringe groups" [:br]
      "artists wait" [:br]
      "consider distance" [:br]
-     "shake, scatter drops..."
-     ]]])
+     "shake, scatter drops..."]
+    [story
+     "Red Carpet, Late Arrival"
+     "red-carpet-late-arrival-a12e19776e56"
+     "https://cdn-images-1.medium.com/max/1600/1*AKo6kKIz6xJRRndHQKn1pw.jpeg"
+     "she wondered then, one thick calf complete " [:br]
+     "if worrying affected her performance" [:br]
+     "crouched in the darkness..."]]])
