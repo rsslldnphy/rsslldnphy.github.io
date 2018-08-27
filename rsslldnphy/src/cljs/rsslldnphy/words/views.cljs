@@ -6,7 +6,7 @@
      [:a {:href (str "https://medium.com/@rsslldnphy/" id)}
      [:p [:strong title]]
      [:div {:style {:height "300px" :overflow "hidden" :margin-bottom "15px"}}
-     [:img {:src img
+     #_[:img {:src img
             :style {:width "100%"}}]]
      (into [:p] blurb)]])
 
