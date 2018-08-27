@@ -5,9 +5,9 @@
   [:div.story {:style {:border-top "1px solid #f0f0f0" :padding-top "15px" :margin-bottom "15px"}}
      [:a {:href (str "https://medium.com/@rsslldnphy/" id)}
      [:p [:strong title]]
-     [:div {:style {:height "300px" :overflow "hidden" :margin-bottom "15px"}}
-     #_[:img {:src img
-            :style {:width "100%"}}]]
+     #_[:div {:style {:height "300px" :overflow "hidden" :margin-bottom "15px"}}
+        [:img {:src img
+               :style {:width "100%"}}]]
      (into [:p] blurb)]])
 
 (defn words
