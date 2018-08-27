@@ -39,7 +39,7 @@
      "Rocket Man"
      "rocket-man-b01a7d090224"
      "https://cdn-images-1.medium.com/max/1600/1*akiMv4-XYWEzq_wyhUVUjw.jpeg"
-     "“I’m a... Rocket Man”...  That song, “sung” by William Shatner, makes me unbearably sad. Much more than the original, he brings out the latent sadness of the song. The sadness of being alone, being unable to communicate with your loved ones. Not for any external reason, simply because you are incapable of communication..."]
+     "“I’m a... Rocket Man”...  That song, “sung” by William Shatner, makes me unbearably sad..."]
     [story
      "Rope Poem"
      "rope-poem-11e279dba05a"
