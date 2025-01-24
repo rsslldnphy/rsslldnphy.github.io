@@ -39,7 +39,7 @@ export default function Home() {
               style={{ lineHeight: "32px" }}
               className={
                 on
-                  ? "w-4 transition-all ease-in-out duration-1000 delay-500"
+                  ? "w-4 transition-all ease-in-out duration-1000 delay-1000"
                   : "w-32 transition-all ease-in-out duration-1000"
               }
             />
