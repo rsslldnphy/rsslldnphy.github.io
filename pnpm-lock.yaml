@@ -5,6 +5,12 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@fontsource/manrope':
+    specifier: ^5.1.1
+    version: 5.1.1
+  '@fontsource/poppins':
+    specifier: ^5.1.1
+    version: 5.1.1
   '@react-router/node':
     specifier: ^7.1.3
     version: 7.1.3(react-router@7.1.3)(typescript@5.7.3)
@@ -569,6 +575,14 @@ packages:
     requiresBuild: true
     dev: true
     optional: true
+
+  /@fontsource/manrope@5.1.1:
+    resolution: {integrity: sha512-5Ry4+6hRxdE59aTUGu5jH4nFsILKyIdqIs7AtCGMfkOwGRxph/fQyOmE9CdU+4vQgaJBopB6XtL6CRg55Ew8Ag==}
+    dev: false
+
+  /@fontsource/poppins@5.1.1:
+    resolution: {integrity: sha512-PQVKHGQOK+UpVNPzTFF9Z9ez3CIDkunfvRXGH95hiDoqWJc1shW4JFqe4tEoqnq7RtZaYrw9aWQq58L4eny5xg==}
+    dev: false
 
   /@isaacs/cliui@8.0.2:
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}
