@@ -51,7 +51,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col-reverse min-h-full z-10" onClick={toggle}>
-      <div className="bg-emerald-400 flex-grow flex z-0">
+      <div className="bg-emerald-400 flex-grow flex z-0 flex-col">
         <div
           className={`w-full gap-4 flex flex-col transition-all ease-in-out duration-500 ${
             on ? "p-8 " : "p-2 delay-1000"
@@ -63,7 +63,7 @@ export default function Home() {
               marginBlockStart: "0",
               marginBlockEnd: "0",
             }}
-            className={`w-full mb-4 ${
+            className={`w-full ${
               on ? "text-5xl" : "text-2xl delay-500"
             } text-white font-semibold flex transition-all ease-in-out duration-500`}
           >
@@ -82,7 +82,7 @@ export default function Home() {
               Dunphy
             </div>
           </h1>
-          <nav className="w-full my-4">
+          <nav className="w-full mt-4 mb-8">
             <ul className="flex flex-row justify-center gap-3 text-neutral-100 font-semibold">
               <li>
                 <Link className="border-b-2 pb-1" to="/blog">
@@ -104,36 +104,38 @@ export default function Home() {
               </li>
             </ul>
           </nav>
-          <div className="container mx-auto p-8">
-            <ul className="grid grid-cols-3 gap-4 items-stretch">
+          <div className="container mx-auto px-4">
+            <ul className="grid grid-cols-1 md:grid-cols-3 gap-4 items-stretch">
               {posts.map((post) => (
                 <li
                   key={post.slug}
                   className="mb-4 bg-white rounded-md bg-opacity-50 overflow-hidden"
                 >
-                  <img src={post.image} />
-                  <div className="p-4">
-                    <a
-                      href={`/posts/${post.slug}`}
-                      className="text-blue-600 hover:underline"
-                    >
-                      {post.title}
-                    </a>
-                    <p className="text-gray-600">{post.excerpt}</p>
-                  </div>
+                  <a href={`/posts/${post.slug}`}>
+                    <div className="max-h-72 md:max-h-32 lg:max-h-56 xl:max-h-72 overflow-hidden">
+                      <img src={post.image} className="w-full" />
+                    </div>
+                    <div className="p-4">
+                      <div className="text-neutral-800 hover:underline font-semibold">
+                        {post.title}
+                      </div>
+                      <p className="text-gray-600">{post.excerpt}</p>
+                    </div>
+                  </a>
                 </li>
               ))}
             </ul>
           </div>
         </div>
-        © Copyright Russell Dunphy {new Date().getFullYear()}
+        <div className="mx-auto text-white mb-8 flex-grow flex items-end">
+          © Copyright Russell Dunphy {new Date().getFullYear()}
+        </div>
       </div>
       <div
-        className={
-          on
-            ? "shrink-0 z-100 bg-pink-500 h-1/3 flex items-center transition-all ease-in-out duration-1000 p-2 delay-500"
-            : "shrink-0 z-100 bg-pink-500 h-24 flex items-start transition-all ease-in-out duration-1000 delay-1000 p-2"
-        }
+        className={`
+         shrink-0 z-100 bg-pink-500 duration-1000 ease-in-out transition-all flex p-2 relative ${
+           on ? "h-80 p-2 delay-500" : "h-24 flex delay-1000"
+         }`}
       >
         <div
           style={{

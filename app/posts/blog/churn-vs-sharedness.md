@@ -1,7 +1,7 @@
 ---
 title: Churn vs sharedness
 excerpt: A metric for measuring architecture quality
-date: 2025-01-03
+date: 2025-01-23
 ---
 
 At a previous company, I co-led a project to decompose our tangled monolith into well factored modules with clear boundaries.
