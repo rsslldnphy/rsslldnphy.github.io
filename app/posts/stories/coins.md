@@ -4,6 +4,8 @@ image_credit: Photo by Josh Appel on Unsplash
 excerpt: I was born in 1985, two years after the pound coin was introduced...
 ---
 
+I was born in 1985, two years after the pound coin was introduced and a year after the last pound note was issued, but it would be sixteen years before I'd put pound coins in my bottles. It's not that £1 was an enormous amount of money back then. It's just that my parents started with pennies. Every day without fail, from the day I was born, they would put a single one pence coin in a glass milk bottle. When the bottle was full, they started another one. On my second birthday they upped the ante: from then on, a two pence coin went in the bottle each day. On my fifth birthday, five. It wasn't until I was twelve and started a paper round that the denomination of coins I was saving started to increase faster than my age.
+
 By then we'd started getting our milk from the supermarket, in plastic bottles that made for unsatisfying containers, so I was using jam jars, bottles of salad dressing, anything that had a neck wide enough to fit the 50p coin I put in each day, and was made of glass, so still made that satisfying clink.
 
 I was too young to remember, but I like to imagine what it felt like in the aftermath of those seismic moments when we transitioned from one to two, from two to five, and from five to ten, as the rate at which we filled up milk bottles increased, then decreased, then increased again. Though by the time I was ten we must have already been using plastic milk. I don't remember.

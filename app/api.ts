@@ -27,6 +27,10 @@ export const getPosts = async (type: "blog" | "pictures" | "stories") => {
           title: attributes.title,
           excerpt: attributes.excerpt,
           date: attributes.date,
+          thumbnail: `/images/${type}/thumbnails/${filename.replace(
+            ".md",
+            "_thumb.jpg"
+          )}`,
         };
       })
   );
@@ -58,5 +62,9 @@ export const getPost = async (
     imageCredit: image_credit,
     ...attributes,
     content: await marked(body),
+    thumbnail: `/images/${type}/thumbnails/${filename.replace(
+      ".md",
+      "_thumb.jpg"
+    )}`,
   };
 };

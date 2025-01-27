@@ -10,26 +10,29 @@ export const PostCard = ({
     image: string;
     title?: string;
     excerpt?: string;
+    thumbnail: string;
   };
 }) => {
   return (
     <li className="mb-4 bg-white rounded-md bg-opacity-50 overflow-hidden">
-      <div className="max-h-72 md:max-h-32 lg:max-h-56 xl:max-h-72 overflow-hidden">
-        <Link to={`/${post.type}/${post.slug}`}>
-          <img src={post.image} className="w-full" />
-        </Link>
-      </div>
-      {post.title && (
-        <div className="p-4">
-          <Link
-            to={`/${post.type}/${post.slug}`}
-            className="text-neutral-800 hover:underline font-semibold"
-          >
-            {post.title}
-          </Link>
-          <div className="text-gray-600">{post.excerpt}</div>
-        </div>
-      )}
+      <Link to={`/${post.type}/${post.slug}`}>
+        <div
+          className="h-72 md:h-32 lg:56 xl:h-72 overflow-hidden"
+          style={{
+            backgroundImage: `url(${post.thumbnail})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+          }}
+        />
+        {post.title && (
+          <div className="p-4">
+            <div className="text-neutral-800 hover:underline font-semibold">
+              {post.title}
+            </div>
+            <div className="text-gray-600">{post.excerpt}</div>
+          </div>
+        )}
+      </Link>
     </li>
   );
 };
