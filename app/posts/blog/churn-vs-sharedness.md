@@ -14,7 +14,7 @@ We needed a way to make this less likely to happen.
 
 The approach we decided on was refactoring the monolith into modules with clear boundaries and ownership in such a way that the “blast radius” of a change was made explicit. Teams moving fast could change their modules safe in the knowledge they were unlikely to break things for teams working on stable parts of the product. Changes to shared modules required a higher level of scrutiny - and communication between the teams affected.
 
-We needed a way of measuring the success of the project. Ultimately we wanted to reduce the number of incidents caused by one team that affected other teams - but though incidents happened more frequently than we would like, they were rare enough that this was a lagging indicator. We needed something that would give us feedback faster.
+With the approach decided, we needed a way of measuring the success of the project. Ultimately we wanted to reduce the number of incidents caused by one team that affected other teams - but though incidents happened more frequently than we would like, they were rare enough that this was a lagging indicator. We needed something that would give us feedback faster.
 
 To do this we developed metrics we could track through static analysis of the code. Together they gave us a holistic view of the progress of the migration. One that I found particularly helpful was comparing churn (no. of commits to files in a module over the last 90 days) to how highly shared a module was (no. of modules that were dependent on it):
 

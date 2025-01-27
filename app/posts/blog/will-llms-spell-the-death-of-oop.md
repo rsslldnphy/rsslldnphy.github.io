@@ -20,6 +20,6 @@ So: FP code, context is local and explicit; OOP code, context is distributed and
 
 However… I did find it a little suspicious that my hunch about what will make code easier for LLMs aligns so neatly with my pre-existing bias as to what makes code easier for humans. I needed an independent, neutral second opinion. So I asked Claude. And he agreed with me (see screenshot). So clearly I am right. 
 
-![Claude agrees that FP is easier for him to work with](/images/posts/will-llms-spell-the-death-of-oop-2.jpg)
+![Claude agrees that FP is easier for him to work with](/images/blog/will-llms-spell-the-death-of-oop-2.jpg)
 
 Although… there is of course no way for Claude to *know* whether it finds OOP or FP easier. It is just trying to guess the most likely next token. And it is very possible that FP fans (me included) like wanging on about how great their favourite paradigm is more than OOP fans do, so there’s just more of that in its training data.
